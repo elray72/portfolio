@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/elray72/react-portfolio#readme",
   "lint-staged": {
-    "*.{js,jsx,css,md}": [
+    "*.{js,jsx,css}": [
       "eslint --fix",
       "git add"
     ]

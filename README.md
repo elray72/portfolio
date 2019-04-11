@@ -1,6 +1,7 @@
 # React Portfolio
 
 Boilerplate for creating a minimalistic web developer portfolio. Built with React and packaged by Webpack4.
+Demo: http://vml.rayranola.com
 
 ### Installation
 
