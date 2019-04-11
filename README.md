@@ -31,13 +31,13 @@ $ npm run test
 ```
 
 ### Configuration
-| File                          | Description |
-|-------------------------------|-------------|
-| `config/webpack/webpack.*.js` |             |
-| `config/webpack/paths.js`     |             |
-| `config/postcss.config.js`    |             |
-| `/.browserslistrc`            |             |
-| `/.eslintrc`                  |             |
+| File                        | Description                             |
+|-----------------------------|-----------------------------------------|
+| config/webpack/webpack.*.js | Webpack standard common. dev, prod.     |
+| config/webpack/paths.js     | Entry points and target paths.          |
+| config/postcss.config.js    | Autoprefixed settings.                  |
+| /.browserslistrc            | Compatible browsers.                    |
+| /.eslintrc                  | Thous shalt bend the knee to standards. |
 
 
 ### Technologies used
