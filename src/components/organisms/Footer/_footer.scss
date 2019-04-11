@@ -1,0 +1,11 @@
+@import "../../../themes/default/scss/common";
+
+.footer {
+    background: $colour-black;
+
+    &__inner {
+        height: inherit;
+        max-width: $page-max-width;
+        margin: 0 auto;
+    }
+}

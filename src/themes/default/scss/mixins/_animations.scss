@@ -1,0 +1,56 @@
+// =====================================================================================================================
+// Animate
+// =====================================================================================================================
+
+@mixin ease-in-out($time: 0.3s) {
+	transition: $time ease-in-out;
+}
+
+@mixin ease-in-out-back($animation, $time: 1s, $iteration: 1) {
+	animation: $animation $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	animation-iteration-count: $iteration;
+	animation-fill-mode: forwards;
+}
+
+@mixin fade-out-in($time: 2s, $colour: #000, $delay: 0, $iteration: 1) {
+
+	animation: fadeOutIn $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	animation-iteration-count: $iteration;
+	animation-delay: $delay;
+
+	@keyframes fadeOutIn {
+		0% {
+			background: rgba($colour, 0);
+		}
+		50% {
+			background: rgba($colour, 1);
+		}
+		100% {
+			background: rgba($colour, 0);
+		}
+	}
+}
+
+@mixin animation-radiate($time: 1.5s, $delay: 0, $iteration: infinite) {
+
+	animation: radiate $time ease-in-out;
+	animation-iteration-count: $iteration;
+	animation-delay: $delay;
+
+	@keyframes radiate {
+		0%      { transform: scale3d(0.4, 0.4, 0.4); opacity: 100%; }
+		100%    { transform: scale3d(1, 1, 1); opacity: 0; }
+	}
+}
+
+@mixin animation-radiate-home($time: 1.5s, $delay: 0, $iteration: infinite) {
+
+	animation: radiate-home $time ease-in-out;
+	animation-iteration-count: $iteration;
+	animation-delay: $delay;
+
+	@keyframes radiate-home {
+		0%      { transform: scale3d(0.35, 0.35, 0.35); opacity: 100%; }
+		100%    { transform: scale3d(1, 1, 1); opacity: 0; }
+	}
+}

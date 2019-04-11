@@ -1,0 +1,11 @@
+@import "../../../themes/default/scss/common";
+
+.filter {
+	height: auto;
+	width: auto;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+}

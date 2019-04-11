@@ -1,0 +1,32 @@
+@import "../../../themes/default/scss/common";
+
+.card {
+	height: 300px;
+
+	&__inner {
+
+	}
+
+	&__header {
+		height: em(45px);
+		width: 100%;
+	}
+
+	&__body {
+
+	}
+
+	&__logo {
+		height: em(60px);
+		width: em(60px);
+		border-radius: 50%;
+		overflow: hidden;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+}

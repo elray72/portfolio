@@ -1,0 +1,26 @@
+/** ====================================================================================================================
+// Layout
+// ================================================================================================================== */
+
+html, body {
+	font-size: $base-font-size;
+	color: $colour-black;
+	overflow-x: hidden;
+}
+
+.page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	position: relative;
+	padding-top: em($header-height-m);
+	z-index: 1;
+	flex-grow: 1;
+}
+
+.section {
+	height: 100vh;
+}

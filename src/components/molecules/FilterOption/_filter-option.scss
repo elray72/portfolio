@@ -1,0 +1,39 @@
+@import "../../../themes/default/scss/common";
+
+.filterOption {
+	display: block;
+	margin: 0 2.5px;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&__label {
+		display: inline-block;
+		margin: 0;
+		cursor: pointer;
+	}
+
+	&__radio {
+		display: none;
+	}
+
+	&__button {
+		display: block;
+		border: 1px solid black;
+		padding: 7px 7px 9px;
+		border-radius: 5px;
+	}
+	&:hover &__button {
+		color: white;
+		background: black;
+		transition: 0.25s ease-in-out;
+	}
+	&__radio:checked + &__button {
+		color: white;
+		background: red;
+		transition: 0.25s ease-in-out;
+	}
+}

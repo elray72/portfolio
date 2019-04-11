@@ -1,0 +1,78 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "jest"],
+  "extends": ["airbnb"],
+  "globals": {
+    "React": true,
+    "document": true,
+    "window": true,
+    "jQuery": true,
+    "$": true,
+    "localStorage": true,
+    "fetch": true
+  },
+  "rules": {
+    "comma-dangle": "warn",
+    "indent": ["warn", "tab"],
+    "linebreak-style": "off",
+    "max-len": ["error", { "code": 120 }],
+    "no-console": "off",
+    "no-tabs": "off",
+    "no-trailing-spaces": [2, { "skipBlankLines": true }],
+    "no-unused-vars": ["warn", { "varsIgnorePattern": "[sS]tyle" }],
+    "no-useless-constructor": "off",
+    "object-curly-newline": "off",
+    "padded-blocks": 0,
+    "prefer-template": 0,
+    "quote-props": "off",
+    "spaced-comment": "warn",
+    "babel/object-curly-spacing": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+    "react/destructuring-assignment": "off",
+    "react/no-unused-state": "warn",
+    "react/prefer-stateless-function": "warn",
+    "react/self-closing-comp": ["warn", { "component": false, "html": false }],
+    "react/sort-comp": [
+      1,
+      {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "rendering"
+        ],
+        "groups": {
+          "rendering": ["/^render.+$/", "render"]
+        }
+      }
+    ],
+    "react/require-default-props": 0,
+    "react/jsx-boolean-value": ["warn", "never"],
+    "react/jsx-closing-bracket-location": [1, {"selfClosing": "line-aligned", "nonEmpty": "after-props"}],
+    "react/jsx-curly-brace-presence": 0,
+    "react/jsx-curly-spacing": ["warn", "never"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-first-prop-new-line": ["warn", "multiline"],
+    "react/jsx-indent": ["warn", "tab"],
+    "react/jsx-indent-props": 0,
+    "react/jsx-key": "error",
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-wrap-multilines": ["warn"]
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  }
+}

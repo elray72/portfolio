@@ -1,0 +1,87 @@
+@import "../../../themes/default/scss/common";
+
+.header {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: em(2*$header-height-m);
+	background: $colour-white;
+	z-index: 2;
+	transform: translateY(em(-$header-height-m));
+	will-change: transform;
+	transition:
+		background 0.25s timing(ease-out-quad) 0.25s,
+		transform 0.25s timing(ease-out-quad) 0s;
+
+	// Modifiers
+	&--sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	&--expanded {
+		transform: translateY(0);
+		position: fixed;
+
+		.header__overlay {
+			visibility: visible;
+			opacity: 0.8;
+			transition: 0.5s timing(ease-out-quad) 0s;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		height: inherit;
+		width: 100%;
+		background: $colour-white;
+		margin: 0 auto;
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	&__logo {
+
+	}
+
+	&__menu {
+		height: em($header-height-m);
+		width: 100%;
+		background: $colour-light-grey;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+	}
+
+	&__overlay {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: calc(100vh + #{em($header-height-m)});
+		width: 100vw;
+		background: $colour-black;
+		z-index: 1;
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.5s timing(ease-out-quad) 0s;
+	}
+
+	.hamburger {
+		position: absolute;
+		top: em($header-height-m);
+		right: 0;
+		cursor: pointer;
+
+		&:hover {
+			@include media-no-touch() {
+
+			}
+		}
+	}
+}

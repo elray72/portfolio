@@ -1,0 +1,21 @@
+// =====================================================================================================================
+// Functions - Global
+// =====================================================================================================================
+
+@import "functions/cubic-bezier";
+
+@function em($pixels, $context: $base-font-size) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $pixels / $context * 1em;
+}
+
+@function timing($context) {
+	@return map-get($cubic-bezier-presets, $context);
+}

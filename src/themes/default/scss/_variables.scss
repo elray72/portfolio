@@ -1,0 +1,61 @@
+/** ====================================================================================================================
+// Variables - Global
+// ================================================================================================================== */
+
+// Base
+// ---------------------------------------------------------------------------------------------------------------------
+$base-font-size:		16px;
+$page-max-width:		1200px;
+
+
+// Layout
+// ---------------------------------------------------------------------------------------------------------------------
+$header-height-m:		60px;
+$max-height-mobile:		823px; // max height for tallest known mainstream device, Pixel XL
+
+
+// Fonts
+// ---------------------------------------------------------------------------------------------------------------------
+$font-heading:			'Roboto', sans-serif;
+$font-text:				'Lato', sans-serif;
+
+
+// Colours
+// ---------------------------------------------------------------------------------------------------------------------
+$colour-black:			#222;
+$colour-white:			#fff;
+$colour-yellow:			#f39c12;
+$colour-red:			#e74c3c;
+$colour-purple:			#8e44ad;
+$colour-blue:			#34495e;
+$colour-green:			#16a085;
+$colour-pink:			#fc427b;
+$colour-nature:			#0affbe;
+$colour-water:			#39718e;
+$colour-light-grey:		#dcdde1;
+
+
+// Breakpoints
+// ---------------------------------------------------------------------------------------------------------------------
+$grid-breakpoints: (
+	default: 0,
+	mobile: 375px,		// iphone 6 onwards
+	phablet: 480px,		// bootstrap: 480px
+	tablet: 768px,		// bootstrap: 768px
+	laptop: 1024px,		// bootstrap: 992px
+	wide:   1440px		// bootstrap: 1200px
+) !default;
+
+$screen-mobile:			map-get($grid-breakpoints, mobile);
+$screen-phablet:		map-get($grid-breakpoints, phablet);
+$screen-tablet:			map-get($grid-breakpoints, tablet);
+$screen-laptop:			map-get($grid-breakpoints, laptop);
+$screen-wide:			map-get($grid-breakpoints, wide);
+
+
+// Grid
+// ---------------------------------------------------------------------------------------------------------------------
+$grid-columns:				12;
+$grid-gutter-width:			30px;
+$grid-float-breakpoint:		$screen-phablet;				// nav expand
+$grid-float-breakpoint-max:	($grid-float-breakpoint - 1);	// nav collapse

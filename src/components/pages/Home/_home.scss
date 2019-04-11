@@ -1,0 +1,75 @@
+/** ====================================================================================================================
+// Home
+// ================================================================================================================== */
+
+@import "../../../themes/default/scss/common";
+
+.home {
+	height: calc(100vh - #{em($header-height-m)});
+	overflow-y: hidden;
+
+	&__swiper {
+		width: 100%;
+		height: inherit;
+		max-height: calc(#{em($max-height-mobile)} - #{em($header-height-m)});
+		overflow: visible;
+		transition: 0.25s ease-in-out;
+		@include media-breakpoint-up(tablet) {
+			max-height: none;
+		}
+
+		&-wrapper {
+			height: inherit;
+		}
+	}
+
+	&__section {
+		height: inherit;
+		flex-shrink: 0;
+		width: 100%;
+		position: relative;
+		transition-property: transform;
+
+		&:nth-child(1) {
+			background: #39718e;
+		}
+
+		&:nth-child(2) {
+			background: aliceblue;
+		}
+
+		&:nth-child(3) {
+			background: rosybrown;
+		}
+
+		&:nth-child(4) {
+			background: mistyrose;
+		}
+	}
+
+	&__pagination {
+		position: absolute;
+		text-align: right;
+		transition: opacity 0.25s timing(ease-out-quad);
+		z-index: 3;
+		right: 0;
+		top: 50%;
+		transform: translate3d(0, -50%, 0);
+	}
+
+	&__bullet {
+		width: em(12);
+		height: em(4);
+		margin: em(18) 0;
+		display: block;
+		background: $colour-black;
+		opacity: 0.2;
+		cursor: pointer;
+		transition: 0.25s timing(ease-out-quad);
+
+		&--active {
+			opacity: 0.7;
+			transform: scaleX(2) translateX(-25%);
+		}
+	}
+}
