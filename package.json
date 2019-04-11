@@ -4,7 +4,11 @@
   "description": "Boilerplate for creating a minimalistic web developer portfolio. Built with React and packaged by Webpack4.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "jest --watchAll --coverage",
+    "precommit": "lint-staged",
+    "fix": "eslint --fix"
   },
   "repository": {
     "type": "git",
