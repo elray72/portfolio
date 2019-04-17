@@ -22,6 +22,10 @@ export default class Header extends React.Component {
 		this.toggleExpandedState();
 	};
 
+	handleOverlayClick = () => {
+		this.toggleExpandedState();
+	};
+
 	render() {
 		const headerClass = classNames({
 			'header': true,
@@ -42,7 +46,7 @@ export default class Header extends React.Component {
 						<Nav />
 					</div>
 				</div>
-				<div className="header__overlay"></div>
+				<div className="header__overlay" onClick={this.handleOverlayClick}></div>
 			</header>
 		);
 	}
