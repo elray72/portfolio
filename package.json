@@ -18,9 +18,9 @@
     "react",
     "webpack",
     "sass",
-    "idangerous",
-    "swiper",
+    "idangerous swiper",
     "mixitup",
+    "redux",
     "jest"
   ],
   "author": "Ray Ranola",
