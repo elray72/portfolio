@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import 'sanitize.css/sanitize.css';
-import styles from './themes/default/scss/style.scss';
+import './themes/default/scss/style.scss';
 
 // Router
 import Home from './components/pages/Home/index';
