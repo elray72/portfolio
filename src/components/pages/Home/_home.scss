@@ -29,23 +29,6 @@
 		width: 100%;
 		position: relative;
 		transition-property: transform;
-
-		//
-		&:nth-child(1) {
-			background: $colour-white;
-		}
-
-		&:nth-child(2) {
-			background: aliceblue;
-		}
-
-		&:nth-child(3) {
-			background: rosybrown;
-		}
-
-		&:nth-child(4) {
-			background: mistyrose;
-		}
 	}
 
 	&__pagination {

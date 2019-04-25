@@ -5,6 +5,7 @@ import style from './_card.scss';
 
 export default class SkillCard extends React.Component {
 	static propTypes = {
+		children: PropTypes.node,
 		className: PropTypes.string,
 	};
 
@@ -19,7 +20,9 @@ export default class SkillCard extends React.Component {
 			<div className={componentClass}>
 				<div className="card__inner">
 					<div className="card__header"></div>
-					Card
+					<div className="card__body">
+						{this.props.children}
+					</div>
 				</div>
 			</div>
 		);

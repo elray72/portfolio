@@ -10,9 +10,9 @@ import './_home.scss';
 
 // Components
 import Slide from '../../molecules/Slide';
-import Hero from '../../organisms/Hero';
+import Hero from '../Hero';
 import Grid from '../../organisms/Grid';
-import Slider from '../../organisms/Swiper';
+import Skills from '../Skills';
 
 export default class Home extends React.Component {
 	shouldComponentUpdate() {
@@ -53,11 +53,12 @@ export default class Home extends React.Component {
 					/>
 				</Helmet>
 				<Swiper {...swiperConfig}>
+
 					<Slide slideType="section">
-						<Hero />
+						<Skills />
 					</Slide>
 					<Slide slideType="section">
-						<Slider />
+						<Hero />
 					</Slide>
 					<Slide slideType="section">
 						<Grid>

@@ -22,8 +22,7 @@ export default class Swiper extends React.Component {
 				<div className="hero__inner">
 					<h1 className="hero__heading">Ray Ranola</h1>
 					<p className="hero__text">
-						Full stack developer at VMLY&R Sydney. <br />
-						Specialising in UI/Interaction, JavaScript over .NET backend.
+						Full stack developer at VMLY&R Sydney.<br />
 					</p>
 					<p className="hero__text"></p>
 				</div>

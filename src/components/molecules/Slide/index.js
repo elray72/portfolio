@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './_slide.scss';
+import './_slide.scss';
 
 export default class Slide extends React.Component {
 	static propTypes = {
@@ -16,7 +16,7 @@ export default class Slide extends React.Component {
 
 	render() {
 		const ComponentType = this.props.slideType || 'div';
-		const componentClass = classNames(this.props.className, 'swiper');
+		const componentClass = classNames(this.props.className, 'slide');
 
 		return (
 			<ComponentType className={componentClass}>

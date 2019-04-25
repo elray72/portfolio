@@ -23,6 +23,7 @@ h1 {
 
 h2 {
 	font-size: em(32);
+	margin-bottom: em(16, 32);
 }
 
 h3, h4, h5 {
@@ -36,7 +37,7 @@ p {
 	br {
 		content: '';
 		display: block;
-		margin-bottom: em(16);
+		margin-bottom: em(8);
 		clear: both;
 	}
 }
