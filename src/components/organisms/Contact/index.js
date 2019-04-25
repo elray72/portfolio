@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './_contact.scss';
+import './_contact.scss';
 
 export default class Contact extends React.Component {
 	static propTypes = {

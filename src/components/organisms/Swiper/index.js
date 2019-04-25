@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactIdSwiper from 'react-id-swiper';
-import swiperStyle from 'react-id-swiper/src/styles/scss/swiper.scss';
-import style from './_swiper.scss';
+import 'react-id-swiper/src/styles/scss/swiper.scss';
+import './_swiper.scss';
 
 import Slide from '../../molecules/Slide';
 import Card from '../../molecules/Card';

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './_footer.scss';
+import './_footer.scss';
 
 export default class Header extends React.Component {
 	static propTypes = {

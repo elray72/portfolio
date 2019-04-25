@@ -25,7 +25,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="page">
-				<Helmet titleTemplate="React - %s" defaultTitle="React - Styleguide">
+				<Helmet titleTemplate="Ray Ranola - %s" defaultTitle="Ray Ranola - Full Stack Developer">
 					<meta name="description" content="" />
 				</Helmet>
 				<Header />

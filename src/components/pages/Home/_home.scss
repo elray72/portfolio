@@ -5,13 +5,13 @@
 @import "../../../themes/default/scss/common";
 
 .home {
-	height: calc(100vh - #{em($header-height-m)});
+	height: 100vh;
 	overflow-y: hidden;
 
 	&__swiper {
 		width: 100%;
 		height: inherit;
-		max-height: calc(#{em($max-height-mobile)} - #{em($header-height-m)});
+
 		overflow: visible;
 		transition: 0.25s ease-in-out;
 		@include media-breakpoint-up(tablet) {
@@ -30,8 +30,10 @@
 		position: relative;
 		transition-property: transform;
 
+		//
 		&:nth-child(1) {
-			background: #39718e;
+			background: $colour-white;
+			background: #000;
 		}
 
 		&:nth-child(2) {

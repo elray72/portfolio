@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './_form.scss';
+import './_form.scss';
 
 export default class Form extends React.Component {
 	static propTypes = {

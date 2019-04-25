@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import style from './_header.scss';
+import './_header.scss';
 
 import Nav from '../Nav';
 import Hamburger from '../../atoms/Hamburger';

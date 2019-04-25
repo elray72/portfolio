@@ -5,7 +5,7 @@
 	margin: 0;
 	padding: 0;
 	height: em(2*$header-height-m);
-	background: $colour-white;
+	background: transparent;
 	z-index: 2;
 	transform: translateY(em(-$header-height-m));
 	will-change: transform;
@@ -35,7 +35,6 @@
 		flex-direction: row;
 		height: inherit;
 		width: 100%;
-		background: $colour-white;
 		margin: 0 auto;
 		position: absolute;
 		overflow: hidden;

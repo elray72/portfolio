@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './_hero.scss';
+import './_hero.scss';
 
 export default class Swiper extends React.Component {
 	static propTypes = {
