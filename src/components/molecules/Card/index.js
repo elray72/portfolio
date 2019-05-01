@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './_card.scss';
+import './_card.scss';
 
 export default class SkillCard extends React.Component {
 	static propTypes = {
