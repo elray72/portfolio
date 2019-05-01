@@ -31,16 +31,14 @@ export default class Home extends React.Component {
 					/>
 				</Helmet>
 				<Swiper {...swiperConfig}>
-
-					<Slide slideType="section">
-						<Skills />
-					</Slide>
 					<Slide slideType="section">
 						<Hero />
 					</Slide>
 					<Slide slideType="section">
+						<Skills />
+					</Slide>
+					<Slide slideType="section">
 						<Grid>
-
 						</Grid>
 					</Slide>
 					<Slide slideType="section">
