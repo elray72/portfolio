@@ -36,25 +36,58 @@ export default class Carousel extends React.Component {
 					<div className="skills__body">
 						<Swiper {...swiperConfig}>
 							<Slide>
-								s1
 								<Card
-									type="skill"
-									title="Slide 1"
-								/>
+									title="JavaScript"
+									logo="/src/components/pages/Skills/img/js.png">
+								</Card>
 							</Slide>
 							<Slide>
-								s2
 								<Card
-									type="skill"
-									title="Slide 2"
-								/>
+									title="React"
+									logo="/src/components/pages/Skills/img/react.png">
+								</Card>
 							</Slide>
 							<Slide>
-								s3
 								<Card
-									type="skill"
-									title="Slide 3"
-								/>
+									title="WebPack"
+									logo="/src/components/pages/Skills/img/webpack.png">
+								</Card>
+							</Slide>
+							<Slide>
+								<Card
+									title=".NET / C#"
+									logo="/src/components/pages/Skills/img/csharp.png">
+								</Card>
+							</Slide>
+							<Slide>
+								<Card
+									title="Angular"
+									logo="/src/components/pages/Skills/img/angular.png">
+								</Card>
+							</Slide>
+							<Slide>
+								<Card
+									title="VueJs"
+									logo="/src/components/pages/Skills/img/vue.png">
+								</Card>
+							</Slide>
+							<Slide>
+								<Card
+									title="TypeScript"
+									logo="/src/components/pages/Skills/img/ts.png">
+								</Card>
+							</Slide>
+							<Slide>
+								<Card
+									title="HTML"
+									logo="/src/components/pages/Skills/img/html5.png">
+								</Card>
+							</Slide>
+							<Slide>
+								<Card
+									title="SCSS"
+									logo="/src/components/pages/Skills/img/sass.png">
+								</Card>
 							</Slide>
 						</Swiper>
 					</div>

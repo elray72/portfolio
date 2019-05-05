@@ -12,7 +12,7 @@ import './_home.scss';
 // Components
 import Slide from '../../molecules/Slide';
 import Hero from '../Hero';
-import Grid from '../../organisms/Grid';
+import Work from '../Work';
 import Skills from '../Skills';
 
 export default class Home extends React.Component {
@@ -32,14 +32,13 @@ export default class Home extends React.Component {
 				</Helmet>
 				<Swiper {...swiperConfig}>
 					<Slide slideType="section">
+						<Work />
+					</Slide>
+					<Slide slideType="section">
 						<Hero />
 					</Slide>
 					<Slide slideType="section">
 						<Skills />
-					</Slide>
-					<Slide slideType="section">
-						<Grid>
-						</Grid>
 					</Slide>
 					<Slide slideType="section">
 					</Slide>

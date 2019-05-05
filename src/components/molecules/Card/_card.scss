@@ -9,19 +9,29 @@
 	}
 
 	&__header {
-		height: em(45px);
+		height: em(60);
+		padding: 0 em(15);
 		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 
-	&__body {
-
+	&__heading {
+		position: relative;
+		top: em(5, 24);
 	}
 
 	&__logo {
-		height: em(60px);
-		width: em(60px);
-		border-radius: 50%;
+		height: em(60);
+		width: em(60);
+		border-radius: em(5);
+		align-self: flex-end;
+		margin-left: auto;
 		overflow: hidden;
+		position: relative;
+		top: em(-15);
 
 		img {
 			display: block;
@@ -30,4 +40,9 @@
 			object-fit: cover;
 		}
 	}
+
+	&__body {
+
+	}
+
 }

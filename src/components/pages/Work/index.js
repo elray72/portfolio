@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import mixitup from 'mixitup';
 import classNames from 'classnames';
-import './_grid.scss';
+import './_work.scss';
 
 // Components
 import Filter from '../../molecules/Filter';
