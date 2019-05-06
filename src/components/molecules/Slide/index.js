@@ -5,7 +5,8 @@ import './_slide.scss';
 
 const Slide = (props) => {
 	const ComponentType = props.slideType || 'div';
-	const componentClass = classNames(props.className, 'slide');
+	const slideTheme = props.slideTheme ? `slide--${props.slideTheme}` : '';
+	const componentClass = classNames(props.className, 'slide', slideTheme);
 
 	return (
 		<ComponentType className={componentClass}>
@@ -18,6 +19,7 @@ Slide.propTypes = {
 	children: PropTypes.node,
 	className: PropTypes.string,
 	slideType: PropTypes.string,
+	slideTheme: PropTypes.string,
 };
 
 export default Slide;
