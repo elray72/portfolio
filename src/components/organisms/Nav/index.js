@@ -4,29 +4,25 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import './_nav.scss';
 
-export default class Header extends React.Component {
-	static propTypes = {
-		className: PropTypes.string,
-	};
+const Nav = (props) => {
+	const componentClass = classNames(props.className, 'nav');
 
-	shouldComponentUpdate() {
-		return false;
-	}
+	return (
+		<nav className={componentClass}>
+			<ul className="nav__list">
+				<li className="nav__item">
+					<Link to="/home" className="nav__link">Home</Link>
+				</li>
+				<li className="nav__item">
+					<Link to="/test" className="nav__link">Test</Link>
+				</li>
+			</ul>
+		</nav>
+	);
+};
 
-	render() {
-		const componentClass = classNames(this.props.className, 'nav');
+Nav.propTypes = {
+	className: PropTypes.string,
+};
 
-		return (
-			<nav className={componentClass}>
-				<ul className="nav__list">
-					<li className="nav__item">
-						<Link to="/home" className="nav__link">Home</Link>
-					</li>
-					<li className="nav__item">
-						<Link to="/test" className="nav__link">Test</Link>
-					</li>
-				</ul>
-			</nav>
-		);
-	}
-}
+export default Nav;

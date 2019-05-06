@@ -1,28 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './_tile.scss';
+import './_tile.scss';
 
-export default class Tile extends React.Component {
-	static propTypes = {
-		className: PropTypes.string,
-		tags: PropTypes.string,
-	};
+const Tile = (props) => {
+	const colourClass = `tile--${props.tags}`;
+	const componentClass = classNames(props.className, 'tile', colourClass);
 
-	constructor(props) {
-		super(props);
-		this.state = {
-		};
-	}
+	return (
+		<div className={componentClass}>
+			<h2>{props.tags}</h2>
+		</div>
+	);
+};
 
-	render() {
-		const colourClass = `tile--${this.props.tags}`;
-		const componentClass = classNames(this.props.className, 'tile', colourClass);
+Tile.propTypes = {
+	className: PropTypes.string,
+	tags: PropTypes.string,
+};
 
-		return (
-			<div className={componentClass}>
-				<h2>{this.props.tags}</h2>
-			</div>
-		);
-	}
-}
+export default Tile;

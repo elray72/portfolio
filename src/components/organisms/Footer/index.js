@@ -3,22 +3,18 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './_footer.scss';
 
-export default class Header extends React.Component {
-	static propTypes = {
-		className: PropTypes.string,
-	};
+const Footer = (props) => {
+	const componentClass = classNames(props.className, 'footer');
 
-	shouldComponentUpdate() {
-		return false;
-	}
+	return (
+		<footer className={componentClass}>
+			<div className="footer__inner"></div>
+		</footer>
+	);
+};
 
-	render() {
-		const componentClass = classNames(this.props.className, 'footer');
+Footer.propTypes = {
+	className: PropTypes.string,
+};
 
-		return (
-			<footer className={componentClass}>
-				<div className="footer__inner"></div>
-			</footer>
-		);
-	}
-}
+export default Footer;
