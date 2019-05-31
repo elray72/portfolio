@@ -7,14 +7,14 @@ import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import 'sanitize.css/sanitize.css';
-import './themes/default/scss/style.scss';
+import '../themes/v1/scss/style.scss';
 
 // Router
-import Home from './components/pages/Home/index';
-import Test from './components/pages/Test/index';
+import Home from './pages/Home/index';
+import Test from './pages/Test/index';
 
 // Components
-import Header from './components/organisms/Header/index';
+import Header from './organisms/Header/index';
 
 class App extends Component {
 	constructor(props) {
