@@ -1,35 +1,22 @@
-/**
- * Combine all reducers in this file and export the combined reducers.
- */
-
 import { fromJS } from 'immutable';
 import { combineReducers } from 'redux-immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
-import appReducer from './appReducer';
-
-/*
- * routeReducer
- *
- * The reducer merges route location changes into our immutable state.
- * The change is necessitated by moving to react-router-redux@5
- *
- */
+// Reducers
+import app from './app';
 
 // Initial routing state
-const routeInitialState = fromJS({
-	location: null,
+const initialState = fromJS({
+	section: null,
 });
 
-/**
- * Merge route into the global application state
- */
+// Route reducer
 /* eslint-disable */
-function routeReducer(state = routeInitialState, action) {
+function route(state = initialState, action) {
 	switch (action.type) {
 		case LOCATION_CHANGE:
 			return state.merge({
-				location: action.payload,
+				section: action.payload,
 			});
 		default:
 			return state;
@@ -41,8 +28,8 @@ function routeReducer(state = routeInitialState, action) {
  */
 export default function createReducer(injectedReducers) {
 	return combineReducers({
-		route: routeReducer,
-		global: appReducer,
+		route,
+		app,
 		...injectedReducers,
 	});
 }

@@ -1,41 +1,36 @@
-/** ====================================================================================================================
- // Store - with dynamic reducers
- // ================================================================================================================= */
-
 import { createStore, applyMiddleware, compose } from 'redux';
-import { fromJS } from 'immutable';
 import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
-import createReducer from './reducers/index';
+import { fromJS } from 'immutable';
+import rootReducer from './reducers/index';
 
 const sagaMiddleware = createSagaMiddleware();
 
-/* eslint-disable */
-export default function configureStore(initialState = {}, history) {
+const configureStore = (initialState = {}, history) => {
 
-	// Create  store with two middleware
-	// 1. sagaMiddleware: Makes redux-sagas work
-	// 2. routerMiddleware: Syncs the location/url path to the state
+	// Middleware
 	const middleware = [
 		sagaMiddleware,
 		routerMiddleware(history),
 	];
 
+	// Enhancers
 	const enhancers = [
 		applyMiddleware(...middleware),
 	];
 
-	const composeEnhancers =
-		process.env.NODE_ENV !== 'production' &&
-		typeof window === 'object' &&
-		window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-			? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-				shouldHotReload: false,
-			})
+	// Compose
+	/* eslint-disable */
+	const composeEnhancers = process.env.NODE_ENV
+		!== 'production'
+		&& typeof window === 'object'
+		&& window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+			? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ shouldHotReload: false })
 			: compose;
 
+	// Create store
 	const store = createStore(
-		createReducer(),
+		rootReducer(),
 		fromJS(initialState),
 		composeEnhancers(...enhancers)
 	);
@@ -45,13 +40,14 @@ export default function configureStore(initialState = {}, history) {
 	store.injectedReducers = {}; // Reducer registry
 	store.injectedSagas = {}; // Saga registry
 
-	// Make reducers hot reloadable, see http://mxs.is/googmo
-	/* istanbul ignore next */
+	// Enable hot reload
 	if (module.hot) {
 		module.hot.accept('./reducers', () => {
-			store.replaceReducer(createReducer(store.injectedReducers));
+			store.replaceReducer(rootReducer(store.injectedReducers));
 		});
 	}
 
 	return store;
-}
+};
+
+export default configureStore;
