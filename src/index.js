@@ -7,14 +7,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
+import configureStore from './store/configureStore';
+import App from './components/App';
 
-import App from './app';
-import configureStore from './store';
-
-const initialState = {};
 const history = createBrowserHistory();
-const store = configureStore(initialState, history);
-const appNode = document.getElementById('app');
+const store = configureStore({}, history);
 
 const render = () => {
 	ReactDOM.render(
@@ -23,7 +20,7 @@ const render = () => {
 				<App />
 			</ConnectedRouter>
 		</Provider>,
-		appNode,
+		document.getElementById('app'),
 	);
 };
 render();
