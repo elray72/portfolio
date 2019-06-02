@@ -11,9 +11,9 @@ import './_home.scss';
 
 // Components
 import Slide from '../../molecules/Slide';
-import Hero from '../Hero';
-import Work from '../Work';
-import Skills from '../Skills';
+import Hero from '../../sections/Hero';
+import Work from '../../sections/Work';
+import Skills from '../../sections/Skills';
 
 export default class Home extends React.Component {
 	shouldComponentUpdate() {

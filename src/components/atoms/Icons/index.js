@@ -9,17 +9,26 @@ import searchIcon from './img/search.svg';
 
 const Icon = (props) => {
 	const componentClass = classNames('icon', props.className);
+	let icon = null;
+	switch (props.icon) {
+	case 'Search':
+		icon = <InlineSVG src={searchIcon} />;
+		break;
+	default:
+		break;
+	}
+	
 	return (
-		<div className={componentClass} role="navigation" aria-label={props.title}>
-			<InlineSVG src={searchIcon} />
+		<div className={componentClass} role="navigation" aria-label={props.title} alt={props.title}>
+			{icon}
 		</div>
 	);
 };
 
 Icon.propTypes = {
 	className: PropTypes.string,
+	icon: PropTypes.string,
 	title: PropTypes.string,
-	fill: PropTypes.string,
 };
 
 export default Icon;

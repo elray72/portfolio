@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './_hero.scss';
+import InlineSVG from 'svg-inline-react';
+import heroImg from './img/hero.svg';
 
 export default class Swiper extends React.Component {
 	static propTypes = {
@@ -20,6 +22,9 @@ export default class Swiper extends React.Component {
 		return (
 			<div className={componentClass}>
 				<div className="hero__inner">
+					<div className="hero__bg">
+						<InlineSVG src={heroImg} />
+					</div>
 					<h1 className="hero__heading">Ray Ranola</h1>
 					<p className="hero__text">
 						Full stack developer at VMLY&R Sydney.<br />

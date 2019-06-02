@@ -2,7 +2,7 @@
  // App
  // ================================================================================================================= */
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
@@ -17,29 +17,20 @@ import Test from './pages/Test/index';
 import Header from './organisms/Header/index';
 // import SearchIcon from './atoms/Icons/SearchIcon';
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
-
-	render() {
-		return (
-			<div className="page">
-				<Helmet titleTemplate="Ray Ranola - %s" defaultTitle="Ray Ranola - Full Stack Developer">
-					<meta name="description" content="" />
-				</Helmet>
-				<Header />
-				<main className="main">
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route exact path="/home" component={Home} />
-						<Route exact path="/test" component={Test} />
-					</Switch>
-				</main>
-			</div>
-		);
-	}
-}
+const App = () => (
+	<div className="page">
+		<Helmet titleTemplate="Ray Ranola - %s" defaultTitle="Ray Ranola - Full Stack Developer">
+			<meta name="description" content="" />
+		</Helmet>
+		<Header />
+		<main className="main">
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/home" component={Home} />
+				<Route exact path="/test" component={Test} />
+			</Switch>
+		</main>
+	</div>
+);
 
 export default hot(module)(App);
