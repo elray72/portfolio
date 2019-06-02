@@ -15,6 +15,7 @@ import Test from './pages/Test/index';
 
 // Components
 import Header from './organisms/Header/index';
+// import SearchIcon from './atoms/Icons/SearchIcon';
 
 class App extends Component {
 	constructor(props) {

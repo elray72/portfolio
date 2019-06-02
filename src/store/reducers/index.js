@@ -3,7 +3,7 @@ import { combineReducers } from 'redux-immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
 // Reducers
-import app from './app';
+import appReducer from './appReducer';
 
 // Initial routing state
 const initialState = fromJS({
@@ -12,7 +12,7 @@ const initialState = fromJS({
 
 // Route reducer
 /* eslint-disable */
-function route(state = initialState, action) {
+function routeReducer(state = initialState, action) {
 	switch (action.type) {
 		case LOCATION_CHANGE:
 			return state.merge({
@@ -28,8 +28,8 @@ function route(state = initialState, action) {
  */
 export default function createReducer(injectedReducers) {
 	return combineReducers({
-		route,
-		app,
+		routeReducer,
+		appReducer,
 		...injectedReducers,
 	});
 }

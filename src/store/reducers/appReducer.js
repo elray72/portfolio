@@ -7,11 +7,11 @@ const initialState = fromJS({
 });
 
 /* eslint-disable */
-function app(state = initialState, action) {
+function appReducer(state = initialState, action) {
 	switch (action.type) {
 		default:
 			return state;
 	}
 }
 
-export default app;
+export default appReducer;
