@@ -6,37 +6,24 @@ import { fromJS } from 'immutable';
 import rootReducer from './reducers/index';
 
 const configureStore = (initialState = {}, history) => {
-
 	// Sagas
 	const sagaMiddleware = createSagaMiddleware();
 
 	// Middleware
-	const middleware = [
-		sagaMiddleware,
-		routerMiddleware(history),
-		loggerMiddleware,
-	];
+	const middleware = [sagaMiddleware, routerMiddleware(history), loggerMiddleware];
 
 	// Enhancers
-	const enhancers = [
-		applyMiddleware(...middleware),
-	];
+	const enhancers = [applyMiddleware(...middleware)];
 
 	// Compose
 	/* eslint-disable */
-	const composeEnhancers = process.env.NODE_ENV
-		!== 'production'
-		&& typeof window === 'object'
-		&& window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+	const composeEnhancers =
+		process.env.NODE_ENV !== 'production' && typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 			? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ shouldHotReload: false })
 			: compose;
 
 	// Create store
-	const store = createStore(
-		rootReducer(),
-		fromJS(initialState),
-		composeEnhancers(...enhancers)
-	);
+	const store = createStore(rootReducer(), fromJS(initialState), composeEnhancers(...enhancers));
 
 	// Extensions
 	store.runSaga = sagaMiddleware.run;

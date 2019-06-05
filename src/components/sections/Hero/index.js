@@ -12,8 +12,7 @@ export default class Swiper extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-		};
+		this.state = {};
 	}
 
 	render() {
@@ -27,9 +26,10 @@ export default class Swiper extends React.Component {
 					</div>
 					<h1 className="hero__heading">Ray Ranola</h1>
 					<p className="hero__text">
-						Full stack developer at VMLY&R Sydney.<br />
+						Full stack developer at VMLY&R Sydney.
+						<br />
 					</p>
-					<p className="hero__text"></p>
+					<p className="hero__text" />
 				</div>
 			</div>
 		);

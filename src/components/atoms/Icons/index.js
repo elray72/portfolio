@@ -11,15 +11,15 @@ const Icon = (props) => {
 	const componentClass = classNames('icon', props.className);
 	let icon = null;
 	switch (props.icon) {
-	case 'Search':
-		icon = <InlineSVG src={searchIcon} />;
-		break;
-	default:
-		break;
+		case 'Search':
+			icon = <InlineSVG src={searchIcon} title={props.title} />;
+			break;
+		default:
+			break;
 	}
-	
+
 	return (
-		<div className={componentClass} role="navigation" aria-label={props.title} alt={props.title}>
+		<div className={componentClass} role="navigation" aria-label={props.title}>
 			{icon}
 		</div>
 	);

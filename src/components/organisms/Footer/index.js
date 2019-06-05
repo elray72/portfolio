@@ -8,7 +8,7 @@ const Footer = (props) => {
 
 	return (
 		<footer className={componentClass}>
-			<div className="footer__inner"></div>
+			<div className="footer__inner" />
 		</footer>
 	);
 };

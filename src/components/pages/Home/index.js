@@ -25,10 +25,7 @@ export default class Home extends React.Component {
 			<div className="home">
 				<Helmet>
 					<title>Home</title>
-					<meta
-						name="description"
-						content="Feature page of React.js Boilerplate application"
-					/>
+					<meta name="description" content="Feature page of React.js Boilerplate application" />
 				</Helmet>
 				<Swiper {...swiperConfig}>
 					<Slide slideType="section" slideTheme="navy">
@@ -37,14 +34,11 @@ export default class Home extends React.Component {
 					<Slide slideType="section">
 						<Work />
 					</Slide>
-
 					<Slide slideType="section">
 						<Skills />
 					</Slide>
-					<Slide slideType="section">
-					</Slide>
-					<Slide slideType="section">
-					</Slide>
+					<Slide slideType="section" />
+					<Slide slideType="section" />
 				</Swiper>
 			</div>
 		);

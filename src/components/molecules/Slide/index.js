@@ -8,11 +8,7 @@ const Slide = (props) => {
 	const slideTheme = props.slideTheme ? `slide--${props.slideTheme}` : '';
 	const componentClass = classNames(props.className, 'slide', slideTheme);
 
-	return (
-		<ComponentType className={componentClass}>
-			{props.children}
-		</ComponentType>
-	);
+	return <ComponentType className={componentClass}>{props.children}</ComponentType>;
 };
 
 Slide.propTypes = {

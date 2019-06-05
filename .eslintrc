@@ -12,8 +12,9 @@
     "fetch": true
   },
   "rules": {
+    "arrow-parens": ["warn", "always", { "requireForBlockBody": true }],
     "comma-dangle": "warn",
-    "indent": ["warn", "tab"],
+    "indent": ["warn", "tab", { "SwitchCase": 1 }],
     "linebreak-style": "off",
     "max-len": ["error", { "code": 160 }],
     "no-console": "off",

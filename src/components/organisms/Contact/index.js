@@ -10,16 +10,12 @@ export default class Contact extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-		};
+		this.state = {};
 	}
 
 	render() {
 		const componentClass = classNames(this.props.className, 'contact');
 
-		return (
-			<div className={componentClass}>
-			</div>
-		);
+		return <div className={componentClass} />;
 	}
 }

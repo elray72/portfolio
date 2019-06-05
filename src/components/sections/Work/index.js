@@ -16,8 +16,7 @@ export default class Grid extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-		};
+		this.state = {};
 		this.mixer = {};
 
 		// elements
@@ -57,7 +56,9 @@ export default class Grid extends React.Component {
 					<h1>Shuffler</h1>
 
 					<Filter className="grid__filter">
-						<button type="button" onClick={this.handleFilterClick}>Green</button>
+						<button type="button" onClick={this.handleFilterClick}>
+							Green
+						</button>
 						<FilterOption name="filter_option" text="Red" value="red" onClick={this.handleFilterClick} />
 						<FilterOption name="filter_option" text="Green" value="green" />
 						<FilterOption name="filter_option" text="Blue" value="blue" />

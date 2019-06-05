@@ -16,8 +16,7 @@ export default class Carousel extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-		};
+		this.state = {};
 	}
 
 	render() {
@@ -29,65 +28,37 @@ export default class Carousel extends React.Component {
 					<div className="skills__header">
 						<h2 className="skills__heading">What I do</h2>
 						<p className="skills__text">
-							I specialise in UI & Interaction development using React, Vue or Vanilla
-							over MERN or ASP.NET backends.
+							I specialise in UI & Interaction development using React, Vue or Vanilla over MERN or ASP.NET backends.
 						</p>
 					</div>
 					<div className="skills__body">
 						<Swiper {...swiperConfig}>
 							<Slide>
-								<Card
-									title="JavaScript"
-									logo="/src/components/sections/Skills/img/js.png">
-								</Card>
+								<Card title="JavaScript" logo="/src/components/sections/Skills/img/js.png" />
 							</Slide>
 							<Slide>
-								<Card
-									title="React"
-									logo="/src/components/sections/Skills/img/react.png">
-								</Card>
+								<Card title="React" logo="/src/components/sections/Skills/img/react.png" />
 							</Slide>
 							<Slide>
-								<Card
-									title="WebPack"
-									logo="/src/components/sections/Skills/img/webpack.png">
-								</Card>
+								<Card title="WebPack" logo="/src/components/sections/Skills/img/webpack.png" />
 							</Slide>
 							<Slide>
-								<Card
-									title=".NET / C#"
-									logo="/src/components/sections/Skills/img/csharp.png">
-								</Card>
+								<Card title=".NET / C#" logo="/src/components/sections/Skills/img/csharp.png" />
 							</Slide>
 							<Slide>
-								<Card
-									title="Angular"
-									logo="/src/components/sections/Skills/img/angular.png">
-								</Card>
+								<Card title="Angular" logo="/src/components/sections/Skills/img/angular.png" />
 							</Slide>
 							<Slide>
-								<Card
-									title="VueJs"
-									logo="/src/components/sections/Skills/img/vue.png">
-								</Card>
+								<Card title="VueJs" logo="/src/components/sections/Skills/img/vue.png" />
 							</Slide>
 							<Slide>
-								<Card
-									title="TypeScript"
-									logo="/src/components/sections/Skills/img/ts.png">
-								</Card>
+								<Card title="TypeScript" logo="/src/components/sections/Skills/img/ts.png" />
 							</Slide>
 							<Slide>
-								<Card
-									title="HTML"
-									logo="/src/components/sections/Skills/img/html5.png">
-								</Card>
+								<Card title="HTML" logo="/src/components/sections/Skills/img/html5.png" />
 							</Slide>
 							<Slide>
-								<Card
-									title="SCSS"
-									logo="/src/components/pages/Skills/img/sass.png">
-								</Card>
+								<Card title="SCSS" logo="/src/components/pages/Skills/img/sass.png" />
 							</Slide>
 						</Swiper>
 					</div>

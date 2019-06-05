@@ -15,11 +15,6 @@ export default class Filter extends React.Component {
 
 	render() {
 		const componentClass = classNames(this.props.className, 'filter');
-
-		return (
-			<ul className={componentClass}>
-				{this.props.children}
-			</ul>
-		);
+		return <ul className={componentClass}>{this.props.children}</ul>;
 	}
 }

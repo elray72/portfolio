@@ -10,16 +10,11 @@ export default class Form extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-		};
+		this.state = {};
 	}
 
 	render() {
 		const componentClass = classNames(this.props.className, 'form');
-
-		return (
-			<div className={componentClass}>
-			</div>
-		);
+		return <div className={componentClass} />;
 	}
 }

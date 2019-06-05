@@ -15,9 +15,7 @@ const Card = (props) => {
 						<img src={props.logo} alt={props.title} />
 					</div>
 				</div>
-				<div className="card__body">
-					{props.children}
-				</div>
+				<div className="card__body">{props.children}</div>
 			</div>
 		</div>
 	);

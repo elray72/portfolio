@@ -11,10 +11,14 @@ const Nav = (props) => {
 		<nav className={componentClass}>
 			<ul className="nav__list">
 				<li className="nav__item">
-					<Link to="/home" className="nav__link">Home</Link>
+					<Link to="/home" className="nav__link">
+						Home
+					</Link>
 				</li>
 				<li className="nav__item">
-					<Link to="/test" className="nav__link">Test</Link>
+					<Link to="/test" className="nav__link">
+						Test
+					</Link>
 				</li>
 			</ul>
 		</nav>
