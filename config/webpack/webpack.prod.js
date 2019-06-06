@@ -1,6 +1,7 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const paths = require('./paths');
 
 module.exports = {
@@ -48,9 +49,7 @@ module.exports = {
 	},
 	/* eslint-disable global-require */
 	plugins: [
-		new CleanWebpackPlugin([paths.output.split('/').pop()], {
-			root: paths.root,
-		}),
+		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: `${paths.css}/[name].[hash].css`,
 		}),
@@ -61,6 +60,9 @@ module.exports = {
 			},
 			canPrint: true,
 		}),
+		new CopyWebpackPlugin([
+			{ from: 'static', to: 'static' },
+		]),
 	],
 	devtool: 'source-map',
 };

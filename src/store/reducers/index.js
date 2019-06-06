@@ -1,35 +1,6 @@
-import { fromJS } from 'immutable';
-import { combineReducers } from 'redux-immutable';
-import { LOCATION_CHANGE } from 'react-router-redux';
+import { combineReducers } from 'redux';
+import { connectRouter } from 'connected-react-router';
 
-// Reducers
-import appReducer from './appReducer';
-
-// Initial routing state
-const initialState = fromJS({
-	section: null,
+export default (history) => combineReducers({
+	router: connectRouter(history),
 });
-
-// Route reducer
-/* eslint-disable */
-function routeReducer(state = initialState, action) {
-	switch (action.type) {
-		case LOCATION_CHANGE:
-			return state.merge({
-				section: action.payload,
-			});
-		default:
-			return state;
-	}
-}
-
-/**
- * Creates the main reducer with the dynamically injected ones
- */
-export default function createReducer(injectedReducers) {
-	return combineReducers({
-		routeReducer,
-		appReducer,
-		...injectedReducers,
-	});
-}

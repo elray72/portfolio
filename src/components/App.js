@@ -6,7 +6,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
-import 'sanitize.css/sanitize.css';
+import 'sanitize.css';
 import '../themes/v1/scss/style.scss';
 
 // Router
@@ -18,7 +18,7 @@ import Header from './organisms/Header/index';
 // import SearchIcon from './atoms/Icons/SearchIcon';
 
 const App = () => (
-	<div className="page">
+	<React.Fragment>
 		<Helmet titleTemplate="Ray Ranola - %s" defaultTitle="Ray Ranola - Full Stack Developer">
 			<meta name="description" content="" />
 		</Helmet>
@@ -30,7 +30,7 @@ const App = () => (
 				<Route exact path="/test" component={Test} />
 			</Switch>
 		</main>
-	</div>
+	</React.Fragment>
 );
 
 export default hot(module)(App);

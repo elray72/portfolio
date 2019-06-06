@@ -34,31 +34,31 @@ export default class Carousel extends React.Component {
 					<div className="skills__body">
 						<Swiper {...swiperConfig}>
 							<Slide>
-								<Card title="JavaScript" logo="/src/components/sections/Skills/img/js.png" />
+								<Card title="JavaScript" logo="/static/img/logo/js.png" />
 							</Slide>
 							<Slide>
-								<Card title="React" logo="/src/components/sections/Skills/img/react.png" />
+								<Card title="React" logo="/static/img/logo/react.png" />
 							</Slide>
 							<Slide>
-								<Card title="WebPack" logo="/src/components/sections/Skills/img/webpack.png" />
+								<Card title="WebPack" logo="/static/img/logo/webpack.png" />
 							</Slide>
 							<Slide>
-								<Card title=".NET / C#" logo="/src/components/sections/Skills/img/csharp.png" />
+								<Card title=".NET / C#" logo="/static/img/logo/csharp.png" />
 							</Slide>
 							<Slide>
-								<Card title="Angular" logo="/src/components/sections/Skills/img/angular.png" />
+								<Card title="Angular" logo="/static/img/logo/angular.png" />
 							</Slide>
 							<Slide>
-								<Card title="VueJs" logo="/src/components/sections/Skills/img/vue.png" />
+								<Card title="VueJs" logo="/static/img/logo/vue.png" />
 							</Slide>
 							<Slide>
-								<Card title="TypeScript" logo="/src/components/sections/Skills/img/ts.png" />
+								<Card title="TypeScript" logo="/static/img/logo/ts.png" />
 							</Slide>
 							<Slide>
-								<Card title="HTML" logo="/src/components/sections/Skills/img/html5.png" />
+								<Card title="HTML" logo="/static/img/logo/html5.png" />
 							</Slide>
 							<Slide>
-								<Card title="SCSS" logo="/src/components/pages/Skills/img/sass.png" />
+								<Card title="SCSS" logo="/static/img/logo/sass.png" />
 							</Slide>
 						</Swiper>
 					</div>
